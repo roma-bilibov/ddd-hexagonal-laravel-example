@@ -20,3 +20,7 @@ Create a shortcut for sail in your ~/.bashrc
 ```
 alias sail='[ -f sail ] && bash sail || bash vendor/bin/sail'
 ```
+Use this command to automatically create ddd structure for a domain. You need to specify the bundled context and the domain. In this example(bundled context: platform and domain: purchase)
+```
+sail artisan make:ddd platform purchase
+```
