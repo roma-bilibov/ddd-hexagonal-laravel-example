@@ -1,9 +1,9 @@
 <?php
 
-//use Src\admin\user\infrastructure\controllers\ExampleGETController;
+use Illuminate\Support\Facades\Route;
+use Src\Admin\User\Infrastructure\Controllers\POST_CreateUserController; 
+use Src\Admin\User\Infrastructure\Controllers\GET_FindUserByUuidController;
 
-// Simpele route example
-// Route::get('/', [ExampleGETController::class, 'index']);
 
-//Authenticathed route example
-// Route::middleware(['auth:sanctum','activitylog'])->get('/', [ExampleGETController::class, 'index']);
+Route::post('/store', [POST_CreateUserController::class, 'index']);
+Route::get('/{uuid}', [GET_FindUserByUuidController::class, 'index']);
